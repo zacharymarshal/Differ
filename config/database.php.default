@@ -1,0 +1,7 @@
+<?php
+
+return array(
+	'dsn' => 'pgsql:host=localhost;dbname=differ',
+	'username' => 'username',
+	'password' => 'password'
+);

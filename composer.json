@@ -1,0 +1,11 @@
+{
+	"autoload": {
+		"psr-0": {
+			"Differ": "lib/"
+		}
+	},
+	"require": {
+		"j4mie/paris": "v1.3.0",
+		"dflydev/markdown": "v1.0.2"
+	}
+}
