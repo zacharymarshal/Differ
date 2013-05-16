@@ -3,7 +3,7 @@
 namespace Differ;
 
 use \Model;
-use dflydev\markdown\MarkdownExtraParser as MarkdownParser;
+use \Michelf\MarkdownExtra;
 
 class Comment extends Model
 {
@@ -12,7 +12,6 @@ class Comment extends Model
 
 	public function getCommentHtml()
 	{
-		$parser = new MarkdownParser();
-		return $parser->transformMarkdown($this->comment);
+		return MarkdownExtra::defaultTransform($this->comment);
 	}
 }

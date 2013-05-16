@@ -12,6 +12,9 @@ class Parser
 
 	public function parse() {
 		$lines = file($this->file);
+		if ( ! $lines) {
+			return false;
+		}
 		$files = array();
 
 		while (count($lines)) {
