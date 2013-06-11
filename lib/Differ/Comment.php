@@ -3,7 +3,6 @@
 namespace Differ;
 
 use \Model;
-use \Michelf\MarkdownExtra;
 
 class Comment extends Model
 {
@@ -12,6 +11,6 @@ class Comment extends Model
 
 	public function getCommentHtml()
 	{
-		return MarkdownExtra::defaultTransform($this->comment);
+		return DifferMarkdown::defaultTransform($this->comment);
 	}
 }
