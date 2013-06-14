@@ -10,7 +10,7 @@ use \Michelf\MarkdownExtra;
  *
  * @package Differ
  */
-class DifferMarkdown extends MarkdownExtra
+class Markdown extends MarkdownExtra
 {
 	/**
 	 * Override the default doHardBreaks to treats newlines 

@@ -11,6 +11,6 @@ class Comment extends Model
 
 	public function getCommentHtml()
 	{
-		return DifferMarkdown::defaultTransform($this->comment);
+		return Markdown::defaultTransform($this->comment);
 	}
 }
