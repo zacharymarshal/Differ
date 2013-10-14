@@ -3,6 +3,11 @@ $ ->
 		$(this).parent('td').parent('tr#line-comment_template').prev('tr.line-comments').show()
 		$(this).parents('tr').remove()
 
+	$("#myModal").modal('show')  unless $("input[name=\"username\"]").val()
+
+	$(document).on 'click', '#set-email', ->
+			$('input[name="username"]').val($('#commenter').val())
+
 	$('.line').click (e) ->
 		info = $(e.target).parents('tr').data()
 		comment = $('#line-comment_template').clone()

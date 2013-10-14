@@ -41,5 +41,15 @@
 		</form>
 	</div>
 </div>
+<div id="myModal" class="modal hide fade">
+	<div class="modal-body">
+		<p>Please provide an email or a username.</p>
+		<input id="commenter" type="text" placeholder="username">
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn" data-dismiss="modal">Never mind</a>
+		<a href="#" class="btn btn-primary" data-dismiss="modal" id="set-email">Set</a>
+	</div>
+</div>
 <script type="text/javascript" src="<?php echo url_for('media/differ/js/diff.js') ?>"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo url_for('media/differ/css/diff.css') ?>">

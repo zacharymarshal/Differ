@@ -5,6 +5,12 @@
       $(this).parent('td').parent('tr#line-comment_template').prev('tr.line-comments').show();
       return $(this).parents('tr').remove();
     });
+    if (!$("input[name=\"username\"]").val()) {
+      $("#myModal").modal('show');
+    }
+    $(document).on('click', '#set-email', function() {
+      return $('input[name="username"]').val($('#commenter').val());
+    });
     $('.line').click(function(e) {
       var comment, comment_textarea, info, name;
       info = $(e.target).parents('tr').data();
