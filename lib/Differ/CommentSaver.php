@@ -19,8 +19,12 @@ class CommentSaver
 	{
 		$saved_comments = array();
 		foreach ($this->comments as $file => $file_comments) {
-			foreach ($file_comments as $line_number => $comment_text) {
-				$comment = \Model::factory('Differ\Comment')->create();
+			foreach ($file_comments as $line_number => $f_comment) {
+				$comment_text = $f_comment['comment'];
+
+				$comment_obj = \Model::factory('Differ\Comment');
+				$comment = (isset($f_comment['id'])) ? $comment_obj->find_one() : $comment_obj->create();
+
 				$comment->diff_id = $this->diff_id;
 				$comment->file = $file;
 				$comment->line_number = $line_number;

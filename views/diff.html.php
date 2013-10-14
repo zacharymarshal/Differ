@@ -15,14 +15,13 @@
 						<tr class="line-comments">
 							<td class="line_numbers">
 								<i class="icon-comment"></i>
+								<a href="#" title="Edit Comment" class="edit-comment" data-line_number="<?php echo $line_number ?>" data-file="<?php echo $file['filename'] ?>" data-comment_text="<?php echo $comment->comment; ?>" data-comment_id="<?php echo $comment->comment_id; ?>"><i class="icon-edit"></i></a>
 							</td>
 							<td>
 								<p>
 									<strong><?php echo $comment->username ?></strong> <em><?php echo $comment->created ?></em>
 								</p>
-								<p>
-									<?php echo $comment->getCommentHtml() ?>
-								</p>
+								<p><?php echo $comment->getCommentHtml() ?></p>
 							</td>
 						</tr>
 						<?php endforeach ?>
@@ -33,7 +32,8 @@
 							<div class="row-fluid">
 								<textarea class="comment-textarea span12"></textarea>
 							</div>
-							<input type="submit" value="Add Comment" class="btn btn-success" /> <a href="javascript:;" class="comment-cancel">cancel</a>
+							<input type="hidden" class="comment-id-input" />
+							<input type="submit" class="btn btn-success btn-submit-comment" value="Add Comment" /> <a href="javascript:;" class="comment-cancel">cancel</a>
 						</td>
 					</tr>
 				</table>
