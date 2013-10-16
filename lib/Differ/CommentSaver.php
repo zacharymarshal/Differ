@@ -23,7 +23,7 @@ class CommentSaver
 				$comment_text = $f_comment['comment'];
 
 				$comment_obj = \Model::factory('Differ\Comment');
-				$comment = (isset($f_comment['id'])) ? $comment_obj->find_one() : $comment_obj->create();
+				$comment = (isset($f_comment['id'])) ? $comment_obj->find_one($f_comment['id']) : $comment_obj->create();
 
 				$comment->diff_id = $this->diff_id;
 				$comment->file = $file;
