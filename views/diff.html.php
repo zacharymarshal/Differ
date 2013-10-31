@@ -7,7 +7,7 @@
 					<input type="text" placeholder="username" name="username" value="<?php echo $username ?>" />
 				</div>
 				<div class="span pull-right">
-					<a id="download-diff" class="btn" href="<?php echo url_for() . "?/download/{$diff_id}" ?>" title="Download Raw Diff"><i class="icon-download"></i></a>
+					<a id="download-diff" class="btn" href="<?php echo url_for("/download/{$diff_id}"); ?>" title="Download Raw Diff"><i class="icon-download"></i></a>
 				</div>
 			</div>
 			<?php foreach ($files as $filename => $file): ?>
