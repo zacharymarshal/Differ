@@ -22,7 +22,7 @@
 						<tr class="line-comments">
 							<td class="line_numbers">
 								<i class="icon-comment"></i>
-								<a href="#" title="Edit Comment" class="edit-comment" data-line_number="<?php echo $line_number ?>" data-file="<?php echo $file['filename'] ?>" data-comment_text="<?php echo $comment->comment; ?>" data-comment_id="<?php echo $comment->comment_id; ?>"><i class="icon-edit"></i></a>
+								<a title="Edit Comment" class="edit-comment" data-line_number="<?php echo $line_number ?>" data-file="<?php echo $file['filename'] ?>" data-comment_text="<?php echo $comment->comment; ?>" data-comment_id="<?php echo $comment->comment_id; ?>"><i class="icon-edit"></i></a>
 							</td>
 							<td>
 								<p>

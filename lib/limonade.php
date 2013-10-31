@@ -1585,7 +1585,7 @@ function render_file($filename, $return = false)
   // {
   //   
   // }
-  $filename = str_replace('../', '', $filename);
+  //$filename = str_replace('../', '', $filename);
   if(file_exists($filename))
   {
     $content_type = mime_type(file_extension($filename));
@@ -2410,8 +2410,10 @@ function mime_type($ext = null)
     'xul'     => 'application/vnd.mozilla.xul+xml',
     'xwd'     => 'image/x-xwindowdump',
     'xyz'     => 'chemical/x-xyz',
-    'zip'     => 'application/zip'
+    'zip'     => 'application/zip',
+    'diff'    => 'text/x-diff', // Adding diff mime-type
   );
+
   return is_null($ext) ? $types : $types[strtolower($ext)];
 }
 
