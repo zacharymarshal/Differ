@@ -1,6 +1,7 @@
 <div class="row">
 	<div class="span12">
 		<p><?php echo $diff->getCommentHtml() ?></p>
+		<p>Submitted by: <?php echo $diff->username ?></p>
 		<form action="<?php echo url_for() . "?/{$diff_id}" ?>" method="post">
 			<input type="text" placeholder="username" name="username" value="<?php echo $username ?>" />
 			<?php foreach ($files as $filename => $file): ?>
