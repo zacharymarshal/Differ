@@ -115,4 +115,17 @@ dispatch('/show/:diff_id', function ($diff_id) {
 	readfile("../data/diffs/$diff_id.diff");
 });
 
+dispatch('/download/:diff_id', function ($diff_id) {
+	// TODO: add password prorerender_filee	
+	// Yup
+	$diff_id = intval($diff_id);
+	$file = option('root_url') . "../data/diffs/$diff_id.diff";
+
+	if (file_exists($file)) {
+		$file = realpath($file);
+
+		render_file($file);
+	}
+});
+
 run();

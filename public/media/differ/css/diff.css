@@ -47,3 +47,12 @@ td.diff-line {
 	background-color: transparent;
 	border: none;
 }
+
+td.diff-line:hover {
+	background-color: #F0E7AF;	
+}
+
+tr.line:hover > td.line_numbers {
+	background-color: #F0E499;	
+	color: black;
+}

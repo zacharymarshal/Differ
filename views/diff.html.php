@@ -3,7 +3,14 @@
 		<p><?php echo $diff->getCommentHtml() ?></p>
 		<p>Submitted by: <?php echo $diff->username ?></p>
 		<form action="<?php echo url_for() . "?/{$diff_id}" ?>" method="post">
-			<input type="text" placeholder="username" name="username" value="<?php echo $username ?>" />
+			<div class="row">
+				<div class="span">
+					<input type="text" placeholder="username" name="username" value="<?php echo $username ?>" />
+				</div>
+				<div class="span pull-right">
+					<a id="download-diff" class="btn" href="<?php echo url_for("/download/{$diff_id}"); ?>" title="Download Raw Diff"><i class="icon-download"></i></a>
+				</div>
+			</div>
 			<?php foreach ($files as $filename => $file): ?>
 				<table class="table table-condensed table-bordered" style="border-collapse: collapse">
 				<?php foreach ($file['lines'] as $line_number => $line): ?>
@@ -16,7 +23,7 @@
 						<tr class="line-comments">
 							<td class="line_numbers">
 								<i class="icon-comment"></i>
-								<a href="#" title="Edit Comment" class="edit-comment" data-line_number="<?php echo $line_number ?>" data-file="<?php echo $file['filename'] ?>" data-comment_text="<?php echo $comment->comment; ?>" data-comment_id="<?php echo $comment->comment_id; ?>"><i class="icon-edit"></i></a>
+								<a title="Edit Comment" class="edit-comment" data-line_number="<?php echo $line_number ?>" data-file="<?php echo $file['filename'] ?>" data-comment_text="<?php echo $comment->comment; ?>" data-comment_id="<?php echo $comment->comment_id; ?>"><i class="icon-edit"></i></a>
 							</td>
 							<td>
 								<p>
